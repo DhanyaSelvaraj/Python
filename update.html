@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<br><br>
+<form method="POST">{% csrf_token %}
+<center>
+	Name:<input type="text" name="name" value="{{obj.name}}" required><br><br>
+	Age:<input type="text" name="age" value="{{obj.age}}" required><br><br>
+	City:<input type="text" name="city" value="{{obj.city}}" required><br><br>
+	<button type="submit">Submit</button>
+	
+</center>
+</form>
+
+{% endblock %}
